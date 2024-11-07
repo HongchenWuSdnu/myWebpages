@@ -1,49 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <title>四班学号尾号123HTML Form Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>书籍列表</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Form Example</h1>
-    <form action="/submit" method="post">
-        <p>Text Input</p>
-        <input type="text" name="username" placeholder="Username"><br><br>
+  <div class="book-category sci-fi">
+    <h2>科幻小说</h2>
+    <div class="book-item">星际穿越 - 评分：4.6</div>
+    <div class="book-item high-rating">火星救援 - 评分：4.8</div>
+    <div class="book-item" id="special-book">银河帝国 - 评分：4.3</div>
+  </div>
 
-        <p>Password Input</p>
-        <input type="password" name="password" placeholder="Password"><br><br>
+  <div class="book-category literature">
+    <h2>文学经典</h2>
+    <div class="book-item">傲慢与偏见 - 评分：4.4</div>
+    <div class="book-item high-rating">了不起的盖茨比 - 评分：4.7</div>
+  </div>
 
-        <p>Radio Buttons</p>
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br><br>
-
-        <p>Checkbox</p>
-        <input type="checkbox" name="interest" value="coding"> Coding<br>
-        <input type="checkbox" name="interest" value="sports"> Sports<br>
-        <input type="checkbox" name="interest" value="music"> Music<br>
-        <input type="checkbox" name="interest" value="travel"> Travel<br>
-        <input type="checkbox" name="interest" value="reading"> Reading<br>
-        <input type="checkbox" name="interest" value="gaming"> Gaming<br><br>
-
-        <p>Select Option</p>
-        <select name="country">
-            <option value="usa">USA</option>
-            <option value="canada">Canada</option>
-            <option value="uk">UK</option>
-            <option value="australia">Australia</option>
-            <option value="germany">Germany</option>
-            <option value="france">France</option>
-            <option value="japan">Japan</option>
-            <option value="india">India</option>
-            <option value="china">China</option>
-            <option value="brazil">Brazil</option>
-        </select><br><br>
-
-        <p>Textarea</p>
-        <textarea name="comments" rows="4" cols="50" placeholder="Comments"></textarea><br><br>
-
-        <p>Submit and Reset Buttons</p>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
+  <div class="book-category history">
+    <h2>历史</h2>
+    <div class="book-item">人类简史 - 评分：4.5</div>
+    <div class="book-item">枪炮、病菌与钢铁 - 评分：4.6</div>
+  </div>
 </body>
 </html>
+
