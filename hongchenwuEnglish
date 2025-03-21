@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Professor Hongchen Wu</h1>
+        <p>Associate Professor, Master's Supervisor, School of Information Science and Engineering, Shandong Normal University</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>Hongchen Wu, Han nationality, born in 1988, is a member of the Communist Party of China, an associate professor, and a master's supervisor. He received his Ph.D. in Computer Science and Technology from Shandong University in June 2016 and joined the School of Information Science and Engineering at Shandong Normal University the same year. From September 2013 to September 2015, he was a joint Ph.D. student at the University of California, Irvine. </p>
+            <p>He is a member of the China Computer Federation (CCF) and a committee member of the CCF Service Computing Technical Committee. He serves as a reviewer for core computer science journals such as the Journal of Network and Computer Applications, IEEE Transactions (Cybernetics, MM, SC, EC, NNLS), Information Sciences, Expert Systems with Applications, and Neurocomputing, as well as interdisciplinary journals including Computers & Education, Computers in Human Behavior, and Multivariant Behavior Research.</p>
+        </section>
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>In the past five years, he has led eight research projects, including:</p>
+            <ul>
+                <li>National Natural Science Foundation of China (Youth Program)</li>
+                <li>Shandong Provincial Natural Science Foundation (Doctoral Program)</li>
+                <li>Shandong Provincial Key Research and Development Program</li>
+                <li>Shandong Provincial Higher Education Science and Technology Program</li>
+                <li>Joint Open Fund of Shandong Provincial Key Laboratory</li>
+                <li>English-taught Course Development Project</li>
+                <li>Shandong Normal University Youth Science and Technology Project Fund</li>
+                <li>Industry Collaboration Research Project</li>
+            </ul>
+            <p>His research focuses on next-generation internet and information security, big data computing based on deep learning, and interdisciplinary artificial intelligence research, including fake news detection, multimodal fake content (text, image, voice) recognition, personalized recommendation, privacy protection, computer-assisted education, and behavioral analysis.</p>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>He has published over 30 papers in prestigious journals and conferences, such as the Journal of Network & Computer Applications and the Symposium on Usable Privacy and Security. His research was presented at the Facebook headquarters' international privacy conference with the talk "Improving the prediction of users’ disclosure behavior by making them disclose more predictably." He holds over 10 national invention patents and software copyrights.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: wuhongchen@sdnu.edu.cn</p>
+            <p>Office: Room 402, Wenzong Building, Changqinghu Campus</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Professor Hongchen Wu | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
