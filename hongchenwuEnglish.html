@@ -1,57 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Homepage</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hongchen Wu | Personal Homepage</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; }
+    h1 { font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
+    h2 { color: #003366; margin-top: 2em; }
+    ul { padding-left: 1em; }
+    li { margin-bottom: 0.5em; }
+    .photo { max-width: 200px; border-radius: 10px; margin-top: 1em; }
+    .section { margin-top: 2em; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Professor Hongchen Wu</h1>
-        <p>Associate Professor, Master's Supervisor, School of Information Science and Engineering, Shandong Normal University</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>Hongchen Wu, Han nationality, born in 1988, is a member of the Communist Party of China, an associate professor, and a master's supervisor. He received his Ph.D. in Computer Science and Technology from Shandong University in June 2016 and joined the School of Information Science and Engineering at Shandong Normal University the same year. From September 2013 to September 2015, he was a joint Ph.D. student at the University of California, Irvine. </p>
-            <p>He is a member of the China Computer Federation (CCF) and a committee member of the CCF Service Computing Technical Committee. He serves as a reviewer for core computer science journals such as the Journal of Network and Computer Applications, IEEE Transactions (Cybernetics, MM, SC, EC, NNLS), Information Sciences, Expert Systems with Applications, and Neurocomputing, as well as interdisciplinary journals including Computers & Education, Computers in Human Behavior, and Multivariant Behavior Research.</p>
-        </section>
-        <section id="research">
-            <h2>Research Interests</h2>
-            <p>In the past five years, he has led eight research projects, including:</p>
-            <ul>
-                <li>National Natural Science Foundation of China (Youth Program)</li>
-                <li>Shandong Provincial Natural Science Foundation (Doctoral Program)</li>
-                <li>Shandong Provincial Key Research and Development Program</li>
-                <li>Shandong Provincial Higher Education Science and Technology Program</li>
-                <li>Joint Open Fund of Shandong Provincial Key Laboratory</li>
-                <li>English-taught Course Development Project</li>
-                <li>Shandong Normal University Youth Science and Technology Project Fund</li>
-                <li>Industry Collaboration Research Project</li>
-            </ul>
-            <p>His research focuses on next-generation internet and information security, big data computing based on deep learning, and interdisciplinary artificial intelligence research, including fake news detection, multimodal fake content (text, image, voice) recognition, personalized recommendation, privacy protection, computer-assisted education, and behavioral analysis.</p>
-        </section>
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>He has published over 30 papers in prestigious journals and conferences, such as the Journal of Network & Computer Applications and the Symposium on Usable Privacy and Security. His research was presented at the Facebook headquarters' international privacy conference with the talk "Improving the prediction of users’ disclosure behavior by making them disclose more predictably." He holds over 10 national invention patents and software copyrights.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: wuhongchen@sdnu.edu.cn</p>
-            <p>Office: Room 402, Wenzong Building, Changqinghu Campus</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Professor Hongchen Wu | All Rights Reserved</p>
-    </footer>
+  <h1>Hongchen Wu</h1>
+  <img src="your-photo.jpg" alt="Personal photo of Hongchen Wu" class="photo" />
+
+  <ul>
+    <li><a href="#view">View</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Selected Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="section" id="view">
+    <h2>View</h2>
+    <p>Dr. <strong>Hongchen Wu</strong> is currently an associate professor in the School of Information Science and Engineering at Shandong Normal University. He received his Ph.D. in Computer Science and Technology from Shandong University in June 2016, and from September 2013 to September 2015, he was a joint Ph.D. student at the University of California, Irvine.</p>
+    <p>Dr. <strong>Hongchen Wu</strong>'s research lies in the areas of next-generation internet and information security, big data computing based on deep learning, and interdisciplinary artificial intelligence research, including fake news detection, multimodal fake content (text, image, voice) recognition, personalized recommendation, privacy protection, computer-assisted education, and behavioral analysis. He is a member of the China Computer Federation (CCF) and a committee member of the CCF Service Computing Technical Committee. He serves as a reviewer for core computer science journals such as the Journal of Network and Computer Applications, IEEE Transactions (Cybernetics, MM, SC, EC, NNLS), Information Sciences, Expert Systems with Applications, and Neurocomputing, as well as interdisciplinary journals including Computers & Education, Computers in Human Behavior, and Multivariant Behavior Research.</p>
+  </div>
+
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <h3>PI: National Natural Science Foundation of China</h3>
+    <p><strong>Research on User Experience Based Cross-Domain Recommendation and Privacy Disclosure Pattern Mining</strong></p>
+    <p><strong>Project Dates:</strong> January 2017 - present</p>
+    <p><strong>Research Areas:</strong> domain specific prediction technology; user experience; cross-domain recommendation; privacy disclosure behavior; factor analysis</p>
+    <p><strong>Project Description:</strong> This research is focusing on user datasets from the cross-domain recommendation, whose characters are “enormous, scattered and fragmented”, and analyses the sensitiveness association between users’ trust to different websites and their personal traits. A cross-sites user service agent will be designed, and the machine learning techniques are modified for recognizing users’ privacy disclosure differences and for clustering them into groups. The privacy default settings are applied to raise users’ initial willingness of disclosure, and the Decider collector is constructed for making the privacy integration strategy, which would track users’ trust fluctuation as well as their feedbacks in privacy disclosure, and thus could gain users’ trust and raise users’ disclosure amount. The confirmatory factor analysis is applied to construct the users’ behavioral model which is consist of the correlations between the trust values and the personal traits of disclosure, and the privacy protection and collection strategies are determined for fitting users’ disclosure behavior model under the cross-domain recommendation hierarchy in the process of model optimization.</p>
+
+    <h3>PI: Natural Science Foundation of Shandong Province of China</h3>
+    <p><strong>Research on Privacy Management Theory and Methods for Cross Platform Users</strong></p>
+    <p><strong>Project Dates:</strong> July 2017 - present</p>
+    <p><strong>Research Areas:</strong> Privacy management; Cross platform users; Differences in user behavior; Factor analysis method; Personalized service</p>
+    <p><strong>Project Description:</strong> This study focuses on the characteristics of "diverse, scattered, and multifactorial" cross platform user data. Machine learning algorithms are used to analyze the weight correlation between cross platform users' trust in different platforms and their own psychological characteristics. The optimal sharing parameters are studied, and a hierarchical experience mathematical model is constructed to demonstrate the mechanism of emotional contagion. Test the differences in user behavior before and after privacy collection, analyze the trend of emotional peaks, construct privacy sharing feature parameters and gradient characteristics, ensure high trust while effectively protecting users' privacy sharing volume. Based on confirmatory factor analysis, develop a leverage mechanism for potential risks and personalized service quality improvement, and study the dynamic interest trajectory and pros and cons strategies of cross platform users. Summarize the joint analysis method of cross platform data, optimize the hierarchical structure, and establish the best management system for collecting user privacy sharing.</p>
+
+    <h3>PI: Key Research and Development Plan of Shandong Province of China</h3>
+    <p><strong>Research on Key Technologies of Online Payment Fraud Identification Based on Internet User Behavior Authentication</strong></p>
+    <p><strong>Project Dates:</strong> January 2019 - present</p>
+    <p><strong>Research Areas:</strong> New generation information technology, big data technology</p>
+    <p><strong>Project Description:</strong> With the rapid development of the new generation of information technology and the Internet, users pay online to obtain fast and convenient e-commerce settlement services, but also increase concerns about security. This study is based on user behavior authentication in the big data environment, and constructs a pattern recognition mechanism for online payment fraud risk. By confirming the core event nodes in the payment process, we can predict the potential payment objects and default transaction entries of users, track the entire chain track process of users' payment, extract the characteristics and emotional fluctuations of fraudulent users by correlation analysis, predict the probability of transaction fraud, and solve the security guarantee problem of dynamic risks in the Internet.</p>
+  </div>
+
+  <div class="section" id="publications">
+    <h2>Selected Publications</h2>
+    <ol>
+      <li>Hongzhu Yu, <strong>Hongchen Wu</strong>, Xiaochang Fang, Meng Li, Huaxiang Zhang: SR-CIBN: Semantic relationship-based consistency and inconsistency balancing network for multimodal fake news detection. Neurocomputing 635: 129997 (2025)</li>
+      <li>Xiaochang Fang, <strong>Hongchen Wu</strong>, Jing Jing, Yihong Meng, Bing Yu, Hongzhu Yu, Huaxiang Zhang: NSEP: Early fake news detection via news semantic environment perception. Inf. Process. Manag. 61(2): 103594 (2024)</li>
+      <li>Lin Zhang, Fang'ai Liu, <strong>Hongchen Wu</strong>, Xuqiang Zhuang, Yaoyao Yan: CFF: combining interactive features and user interest features for click-through rate prediction. J. Supercomput. 80(3): 3282-3309 (2024)</li>
+      <li>Jing Jing, <strong>Hongchen Wu</strong>, Jie Sun, Xiaochang Fang, Huaxiang Zhang: Multimodal fake news detection via progressive fusion networks. Inf. Process. Manag. 60(1): 103120 (2023)</li>
+      <li>Depeng Zhang, <strong>Hongchen Wu</strong>, Feng Yang: FSCR: A Deep Social Recommendation Model for Misleading Information. Inf. 12(1): 37 (2021)</li>
+      <li>Mingyang Li, <strong>Hongchen Wu</strong>, Huaxiang Zhang: Matrix Factorization for Personalized Recommendation With Implicit Feedback and Temporal Information in Social Ecommerce Networks. IEEE Access 7: 141268-141276 (2019)</li>
+      <li>Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong: Modality-Reconstructed Cross-Media Retrieval via Sparse Neural Networks Pre-Trained by Restricted Boltzmann Machines. J. Adv. Comput. Intell. Intell. Informatics 22(5): 611-620 (2018)</li>
+      <li>Xiao Dong, Jiande Sun, Peiyong Duan, Lili Meng, Yanyan Tan, Wenbo Wan, <strong>Hongchen Wu</strong>, Bin Zhang, Huaxiang Zhang: Semi-supervised modality-dependent cross-media retrieval. Multim. Tools Appl. 77(3): 3579-3595 (2018)</li>
+      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang: A Heuristic Model for Supporting Users' Decision-Making in Privacy Disclosure for Recommendation. Secur. Commun. Networks 2018: 2790373:1-2790373:13 (2018)</li>
+      <li><strong>Hongchen Wu</strong>, Mingyang Li, Huaxiang Zhang: UISTD: A Trust-Aware Model for Diverse Item Personalization in Social Sensing with Lower Privacy Intrusion. Sensors 18(12): 4383 (2018)</li>
+      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang: CEPTM: A Cross-Edge Model for Diverse Personalization Service and Topic Migration in MEC. Wirel. Commun. Mob. Comput. 2018: 8056195:1-8056195:12 (2018)</li>
+      <li>Li Sun, Huayu Wang, Yongxin Zhang, Yinggang Liu, <strong>Hongchen Wu</strong>, Yanhui Ding, Jinghuan Zhang: information to Intelligence(itoI): An Adaptive and Intelligent Prototype of Knowledge Construction for College Student. ICCSE 2018: 2:1-2:4</li>
+      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang: DLPDS: Learning Users' Information Sharing Behaviors for Privacy Default Setting in Recommender System. ICCCS (2) 2017: 29-39</li>
+      <li>Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong: Cross-Media Semantic Matching via Sparse Neural Network Pre-trained by Deep Restricted Boltzmann Machines. ICIMCS 2017: 280-289</li>
+      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qingzhong Li: Div-clustering: Exploring active users for social collaborative recommendation. J. Netw. Comput. Appl. 36(6): 1642-1650 (2013)</li>
+      <li>Yongqing Zheng, Yufang Bian, Xin Du, <strong>Hongchen Wu</strong>: A Deep Web Database Sampling Method Based on High Correlation Keywords. WISA 2012: 9-14</li>
+      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qingzhong Li, Lin Lin: PointBurst: Towards a Trust-Relationship Framework for Improved Social Recommendations. APWeb Workshops 2012: 78-88</li>
+      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qiuyan Li: Actively building collaborative filtering recommendation in clustered social data. CSCWD 2012: 693-697</li>
+    </ol>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> wuhongchen@sdnu.edu.cn</p>
+    <p><strong>Office:</strong> Room 402, Wenzong Building, Changqinghu Campus</p>
+  </div>
+
 </body>
 </html>
