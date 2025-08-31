@@ -5,25 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hongchen Wu | Personal Homepage</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; }
+    /* 基础排版与中文字体统一 */
+    :root {
+      --body-font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+                   "Helvetica Neue", Arial, "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+      --text-color: #333;
+      --heading-color: #003366;
+    }
+    body { font-family: var(--body-font); color: var(--text-color);
+           max-width: 900px; margin: auto; padding: 20px; line-height: 1.75; }
     h1 { font-size: 2em; border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
-    h2 { color: #003366; margin-top: 2em; }
+    h2 { color: var(--heading-color); margin-top: 2em; }
     ul { padding-left: 1em; }
     li { margin-bottom: 0.5em; }
+
     .photo { max-width: 200px; border-radius: 10px; margin-top: 1em; }
     .section { margin-top: 2em; }
+
+    /* 仅标题单行省略；其余中文保持统一颜色与字体 */
+    h3 {
+      font-size: 1.1em;
+      margin: 1.2em 0 0.2em;
+      color: var(--text-color);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .muted-cn { color: inherit; font-size: 0.95em; margin: 0.1em 0 0.5em; }
+
+    /* 元信息整体不被拆断，避免单字掉行 */
+    .grant-meta {
+      font-size: 0.95em; margin: 0.2em 0 0.6em; color: inherit;
+      display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: baseline;
+    }
+    .grant-meta span { white-space: nowrap; }
+
+    /* 段落与列表左右对齐（中文优化） */
+    p, li {
+      text-align: justify;
+      text-justify: inter-ideograph;
+      line-break: loose;
+      word-break: break-word;
+      text-align-last: left;
+    }
+
+    /* 导航 */
+    nav ul { list-style: none; padding-left: 0; display: flex; gap: 14px; }
+    nav a { color: var(--text-color); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+
+    /* 高亮目标期刊名称（与站点配色一致） */
+    .hi-journal { font-weight: 700; color: var(--heading-color); }
+    .venue { font-style: normal; }
+    .authors, .title, .venue, .pubmeta { display: inline; }
   </style>
 </head>
 <body>
   <h1>Hongchen Wu</h1>
   <img src="your-photo.jpg" alt="Personal photo of Hongchen Wu" class="photo" />
 
-  <ul>
-    <li><a href="#view">View</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#publications">Selected Publications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="#view">View</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Selected Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <div class="section" id="view">
     <h2>View</h2>
@@ -33,46 +81,205 @@
 
   <div class="section" id="projects">
     <h2>Projects</h2>
-    <h3>PI: National Natural Science Foundation of China</h3>
-    <p><strong>Research on User Experience Based Cross-Domain Recommendation and Privacy Disclosure Pattern Mining</strong></p>
-    <p><strong>Project Dates:</strong> January 2017 - present</p>
-    <p><strong>Research Areas:</strong> domain specific prediction technology; user experience; cross-domain recommendation; privacy disclosure behavior; factor analysis</p>
+
+    <!-- 1) NSFC 面上基金（置顶） -->
+    <h3 title="PI: National Natural Science Foundation of China (国家自然科学基金面上基金项目 62572288)">
+      PI: National Natural Science Foundation of China (国家自然科学基金面上基金项目 62572288)
+    </h3>
+    <div class="grant-meta">
+      <span><strong>Project Dates:</strong> January 2026 - December 2029</span>
+    </div>
+    <p><strong>Project Name:</strong> Key Technologies for Multimodal Fake Information Detection Targeting Deepfakes（面向深度伪造的多模态虚假信息检测关键技术）</p>
+    <p><strong>Research Areas:</strong> Key Technology; Deepfake; Multimodal; Fake Information; Online Conformity Behavior</p>
+    <p><strong>Project Description:</strong> Research on multimodal fake information detection for deepfake is a critical issue that
+needs to be addressed urgently in online public opinion monitoring and secured big data
+prediction with early warning systems. This project relies basically on computer science
+techniques and integrates interdisciplinary technologies such as psychology and
+cyber-behavioral science. It first establishes multimodal data sample repositories of
+text, images, and speech from network traffic information, consistently extracting
+encoded features such as text syntax, image texture, and speech emotion, etc., and
+generating multimodal semantic vectors through constructed data-augmented multi-layered
+semantic information space and identified fabrication traces. Then, this project further
+employs deep learning models to perceive contradictory semantics in sudden traffic
+surges, to address the challenge posed by the iterative advancement of deepfake
+technology, which makes fake information harder to detect and emotionally manipulates
+users to accelerate its spread, called online conformity behavior. By segmenting macro-
+and micro-semantic environments and amplifying the distinction between positive and
+negative samples, the approach enhances the real-time identification of forged features.
+Finally, dynamic communities are detected to identify opinion leaders who spread negative
+emotions through influence calculation in the semantic environment, where epidemic models
+are applied to limit the level of dissemination and random graph decay mechanism is
+employed to reduce interaction weights, curbing the dynamic expansion of fake
+information. This project provides key technical support and theoretical foundations for
+the security framework construction of multimodal fake news detection and intelligent
+network behavior guidance.</p>
+
+    <!-- 2) NSFC 青年基金 -->
+    <h3 title="PI: National Natural Science Foundation of China (国家自然科学基金青年基金项目 61702312)">
+      PI: National Natural Science Foundation of China (国家自然科学基金青年基金项目 61702312)
+    </h3>
+    <div class="muted-cn">（国家自然科学基金青年基金项目）</div>
+    <div class="grant-meta">
+      <span><strong>Project Dates:</strong> January 2017 - December 2020</span>
+    </div>
+    <p><strong>Project Name:</strong> Research on User Experience Based Cross-Domain Recommendation and Privacy Disclosure Pattern Mining（基于用户体验的跨域推荐及隐私分享行为模式研究）</p>
+    <p><strong>Research Areas:</strong> Domain specific prediction technology; User experience; Cross-domain recommendation; Privacy disclosure behavior; Factor analysis</p>
     <p><strong>Project Description:</strong> This research is focusing on user datasets from the cross-domain recommendation, whose characters are “enormous, scattered and fragmented”, and analyses the sensitiveness association between users’ trust to different websites and their personal traits. A cross-sites user service agent will be designed, and the machine learning techniques are modified for recognizing users’ privacy disclosure differences and for clustering them into groups. The privacy default settings are applied to raise users’ initial willingness of disclosure, and the Decider collector is constructed for making the privacy integration strategy, which would track users’ trust fluctuation as well as their feedbacks in privacy disclosure, and thus could gain users’ trust and raise users’ disclosure amount. The confirmatory factor analysis is applied to construct the users’ behavioral model which is consist of the correlations between the trust values and the personal traits of disclosure, and the privacy protection and collection strategies are determined for fitting users’ disclosure behavior model under the cross-domain recommendation hierarchy in the process of model optimization.</p>
 
-    <h3>PI: Natural Science Foundation of Shandong Province of China</h3>
-    <p><strong>Research on Privacy Management Theory and Methods for Cross Platform Users</strong></p>
-    <p><strong>Project Dates:</strong> July 2017 - present</p>
+    <!-- 3) 山东省自然科学基金（博士基金）—— 编号放入中文名括号 -->
+    <h3 title="PI: Natural Science Foundation of Shandong Province of China">
+      PI: Natural Science Foundation of Shandong Province of China
+    </h3>
+    <div class="muted-cn">（山东省自然科学基金博士基金项目）</div>
+    <div class="grant-meta">
+      <span><strong>Project Dates:</strong> August 2017 - December 2019</span>
+    </div>
+    <p><strong>Project Name:</strong> 面向跨平台用户的隐私管理理论与方法研究（ZR2017BF019）</p>
     <p><strong>Research Areas:</strong> Privacy management; Cross platform users; Differences in user behavior; Factor analysis method; Personalized service</p>
     <p><strong>Project Description:</strong> This study focuses on the characteristics of "diverse, scattered, and multifactorial" cross platform user data. Machine learning algorithms are used to analyze the weight correlation between cross platform users' trust in different platforms and their own psychological characteristics. The optimal sharing parameters are studied, and a hierarchical experience mathematical model is constructed to demonstrate the mechanism of emotional contagion. Test the differences in user behavior before and after privacy collection, analyze the trend of emotional peaks, construct privacy sharing feature parameters and gradient characteristics, ensure high trust while effectively protecting users' privacy sharing volume. Based on confirmatory factor analysis, develop a leverage mechanism for potential risks and personalized service quality improvement, and study the dynamic interest trajectory and pros and cons strategies of cross platform users. Summarize the joint analysis method of cross platform data, optimize the hierarchical structure, and establish the best management system for collecting user privacy sharing.</p>
 
-    <h3>PI: Key Research and Development Plan of Shandong Province of China</h3>
-    <p><strong>Research on Key Technologies of Online Payment Fraud Identification Based on Internet User Behavior Authentication</strong></p>
-    <p><strong>Project Dates:</strong> January 2019 - present</p>
-    <p><strong>Research Areas:</strong> New generation information technology, big data technology</p>
+    <!-- 4) 山东省重点研发计划 —— 编号放入中文名括号 -->
+    <h3 title="PI: Key Research and Development Plan of Shandong Province of China">
+      PI: Key Research and Development Plan of Shandong Province of China
+    </h3>
+    <div class="muted-cn">（山东省重点研发计划）</div>
+    <div class="grant-meta">
+      <span><strong>Project Dates:</strong> January 2019 - December 2021</span>
+    </div>
+    <p><strong>Project Name:</strong> 基于互联网用户行为认证的在线支付欺诈识别关键技术研究（2019GGX101075）</p>
+    <p><strong>Research Areas:</strong> New generation information technology; Big data technology</p>
     <p><strong>Project Description:</strong> With the rapid development of the new generation of information technology and the Internet, users pay online to obtain fast and convenient e-commerce settlement services, but also increase concerns about security. This study is based on user behavior authentication in the big data environment, and constructs a pattern recognition mechanism for online payment fraud risk. By confirming the core event nodes in the payment process, we can predict the potential payment objects and default transaction entries of users, track the entire chain track process of users' payment, extract the characteristics and emotional fluctuations of fraudulent users by correlation analysis, predict the probability of transaction fraud, and solve the security guarantee problem of dynamic risks in the Internet.</p>
   </div>
 
   <div class="section" id="publications">
     <h2>Selected Publications</h2>
     <ol>
-      <li>Hongzhu Yu, <strong>Hongchen Wu</strong>, Xiaochang Fang, Meng Li, Huaxiang Zhang: SR-CIBN: Semantic relationship-based consistency and inconsistency balancing network for multimodal fake news detection. Neurocomputing 635: 129997 (2025)</li>
-      <li>Xiaochang Fang, <strong>Hongchen Wu</strong>, Jing Jing, Yihong Meng, Bing Yu, Hongzhu Yu, Huaxiang Zhang: NSEP: Early fake news detection via news semantic environment perception. Inf. Process. Manag. 61(2): 103594 (2024)</li>
-      <li>Lin Zhang, Fang'ai Liu, <strong>Hongchen Wu</strong>, Xuqiang Zhuang, Yaoyao Yan: CFF: combining interactive features and user interest features for click-through rate prediction. J. Supercomput. 80(3): 3282-3309 (2024)</li>
-      <li>Jing Jing, <strong>Hongchen Wu</strong>, Jie Sun, Xiaochang Fang, Huaxiang Zhang: Multimodal fake news detection via progressive fusion networks. Inf. Process. Manag. 60(1): 103120 (2023)</li>
-      <li>Depeng Zhang, <strong>Hongchen Wu</strong>, Feng Yang: FSCR: A Deep Social Recommendation Model for Misleading Information. Inf. 12(1): 37 (2021)</li>
-      <li>Mingyang Li, <strong>Hongchen Wu</strong>, Huaxiang Zhang: Matrix Factorization for Personalized Recommendation With Implicit Feedback and Temporal Information in Social Ecommerce Networks. IEEE Access 7: 141268-141276 (2019)</li>
-      <li>Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong: Modality-Reconstructed Cross-Media Retrieval via Sparse Neural Networks Pre-Trained by Restricted Boltzmann Machines. J. Adv. Comput. Intell. Intell. Informatics 22(5): 611-620 (2018)</li>
-      <li>Xiao Dong, Jiande Sun, Peiyong Duan, Lili Meng, Yanyan Tan, Wenbo Wan, <strong>Hongchen Wu</strong>, Bin Zhang, Huaxiang Zhang: Semi-supervised modality-dependent cross-media retrieval. Multim. Tools Appl. 77(3): 3579-3595 (2018)</li>
-      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang: A Heuristic Model for Supporting Users' Decision-Making in Privacy Disclosure for Recommendation. Secur. Commun. Networks 2018: 2790373:1-2790373:13 (2018)</li>
-      <li><strong>Hongchen Wu</strong>, Mingyang Li, Huaxiang Zhang: UISTD: A Trust-Aware Model for Diverse Item Personalization in Social Sensing with Lower Privacy Intrusion. Sensors 18(12): 4383 (2018)</li>
-      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang: CEPTM: A Cross-Edge Model for Diverse Personalization Service and Topic Migration in MEC. Wirel. Commun. Mob. Comput. 2018: 8056195:1-8056195:12 (2018)</li>
-      <li>Li Sun, Huayu Wang, Yongxin Zhang, Yinggang Liu, <strong>Hongchen Wu</strong>, Yanhui Ding, Jinghuan Zhang: information to Intelligence(itoI): An Adaptive and Intelligent Prototype of Knowledge Construction for College Student. ICCSE 2018: 2:1-2:4</li>
-      <li><strong>Hongchen Wu</strong>, Huaxiang Zhang: DLPDS: Learning Users' Information Sharing Behaviors for Privacy Default Setting in Recommender System. ICCCS (2) 2017: 29-39</li>
-      <li>Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong: Cross-Media Semantic Matching via Sparse Neural Network Pre-trained by Deep Restricted Boltzmann Machines. ICIMCS 2017: 280-289</li>
-      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qingzhong Li: Div-clustering: Exploring active users for social collaborative recommendation. J. Netw. Comput. Appl. 36(6): 1642-1650 (2013)</li>
-      <li>Yongqing Zheng, Yufang Bian, Xin Du, <strong>Hongchen Wu</strong>: A Deep Web Database Sampling Method Based on High Correlation Keywords. WISA 2012: 9-14</li>
-      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qingzhong Li, Lin Lin: PointBurst: Towards a Trust-Relationship Framework for Improved Social Recommendations. APWeb Workshops 2012: 78-88</li>
-      <li><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qiuyan Li: Actively building collaborative filtering recommendation in clustered social data. CSCWD 2012: 693-697</li>
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Xiaochang Fang, Hongxuan Li, Jie Sun, Jing Jing, Lin Zhang, Yihong Meng, Zhaorong Jing, Huaxiang Zhang.</span>
+        <span class="title"> Impact of alleviating misinformation: an impulsive buying-aware model for sequential recommendation.</span>
+        <span class="hi-journal"> Expert Systems with Applications</span>
+        <span class="pubmeta"> (article 128513; Accepted: <time datetime="2025-06-07">2025-06-07</time>; 2025).</span>
+      </li>
+
+      <li>
+        <span class="authors">Hongzhu Yu, <strong>Hongchen Wu</strong>, Xiaochang Fang, Meng Li, Huaxiang Zhang.</span>
+        <span class="title"> SR-CIBN: Semantic relationship-based consistency and inconsistency balancing network for multimodal fake news detection.</span>
+        <span class="hi-journal"> Neurocomputing</span>
+        <span class="pubmeta"> 635: 129997 (2025).</span>
+      </li>
+
+      <li>
+        <span class="authors">Xiaochang Fang, <strong>Hongchen Wu</strong>, Jing Jing, Yihong Meng, Bing Yu, Hongzhu Yu, Huaxiang Zhang.</span>
+        <span class="title"> NSEP: Early fake news detection via news semantic environment perception.</span>
+        <span class="hi-journal"> Information Processing &amp; Management</span>
+        <span class="pubmeta"> 61(2): 103594 (2024).</span>
+      </li>
+
+      <li>
+        <span class="authors">Lin Zhang, Fang'ai Liu, <strong>Hongchen Wu</strong>, Xuqiang Zhuang, Yaoyao Yan.</span>
+        <span class="title"> CFF: combining interactive features and user interest features for click-through rate prediction.</span>
+        <span class="venue"> The Journal of Supercomputing</span>
+        <span class="pubmeta"> 80(3): 3282-3309 (2024).</span>
+      </li>
+
+      <li>
+        <span class="authors">Jing Jing, <strong>Hongchen Wu</strong>, Jie Sun, Xiaochang Fang, Huaxiang Zhang.</span>
+        <span class="title"> Multimodal fake news detection via progressive fusion networks.</span>
+        <span class="hi-journal"> Information Processing &amp; Management</span>
+        <span class="pubmeta"> 60(1): 103120 (2023).</span>
+      </li>
+
+      <li>
+        <span class="authors">Depeng Zhang, <strong>Hongchen Wu</strong>, Feng Yang.</span>
+        <span class="title"> FSCR: A Deep Social Recommendation Model for Misleading Information.</span>
+        <span class="venue"> Information</span>
+        <span class="pubmeta"> 12(1): 37 (2021).</span>
+      </li>
+
+      <li>
+        <span class="authors">Mingyang Li, <strong>Hongchen Wu</strong>, Huaxiang Zhang.</span>
+        <span class="title"> Matrix Factorization for Personalized Recommendation With Implicit Feedback and Temporal Information in Social Ecommerce Networks.</span>
+        <span class="venue"> IEEE Access</span>
+        <span class="pubmeta"> 7: 141268-141276 (2019).</span>
+      </li>
+
+      <li>
+        <span class="authors">Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong.</span>
+        <span class="title"> Modality-Reconstructed Cross-Media Retrieval via Sparse Neural Networks Pre-Trained by Restricted Boltzmann Machines.</span>
+        <span class="venue"> Journal of Advanced Computational Intelligence and Intelligent Informatics</span>
+        <span class="pubmeta"> 22(5): 611-620 (2018).</span>
+      </li>
+
+      <li>
+        <span class="authors">Xiao Dong, Jiande Sun, Peiyong Duan, Lili Meng, Yanyan Tan, Wenbo Wan, <strong>Hongchen Wu</strong>, Bin Zhang, Huaxiang Zhang.</span>
+        <span class="title"> Semi-supervised modality-dependent cross-media retrieval.</span>
+        <span class="venue"> Multimedia Tools and Applications</span>
+        <span class="pubmeta"> 77(3): 3579-3595 (2018).</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang.</span>
+        <span class="title"> A Heuristic Model for Supporting Users' Decision-Making in Privacy Disclosure for Recommendation.</span>
+        <span class="venue"> Security and Communication Networks</span>
+        <span class="pubmeta"> 2018: 2790373:1-2790373:13 (2018).</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Mingyang Li, Huaxiang Zhang.</span>
+        <span class="title"> UISTD: A Trust-Aware Model for Diverse Item Personalization in Social Sensing with Lower Privacy Intrusion.</span>
+        <span class="venue"> Sensors</span>
+        <span class="pubmeta"> 18(12): 4383 (2018).</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Huaxiang Zhang, Lizhen Cui, Xinjun Wang.</span>
+        <span class="title"> CEPTM: A Cross-Edge Model for Diverse Personalization Service and Topic Migration in MEC.</span>
+        <span class="venue"> Wireless Communications and Mobile Computing</span>
+        <span class="pubmeta"> 2018: 8056195:1-8056195:12 (2018).</span>
+      </li>
+
+      <!-- 以下为会议论文（非期刊，保持 venue 名称即可） -->
+      <li>
+        <span class="authors">Li Sun, Huayu Wang, Yongxin Zhang, Yinggang Liu, <strong>Hongchen Wu</strong>, Yanhui Ding, Jinghuan Zhang.</span>
+        <span class="title"> information to Intelligence(itoI): An Adaptive and Intelligent Prototype of Knowledge Construction for College Student.</span>
+        <span class="venue"> ICCSE</span>
+        <span class="pubmeta"> 2018: 2:1-2:4.</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Huaxiang Zhang.</span>
+        <span class="title"> DLPDS: Learning Users' Information Sharing Behaviors for Privacy Default Setting in Recommender System.</span>
+        <span class="venue"> ICCCS</span>
+        <span class="pubmeta"> (2) 2017: 29-39.</span>
+      </li>
+
+      <li>
+        <span class="authors">Bin Zhang, Huaxiang Zhang, Jiande Sun, Zhenhua Wang, <strong>Hongchen Wu</strong>, Xiao Dong.</span>
+        <span class="title"> Cross-Media Semantic Matching via Sparse Neural Network Pre-trained by Deep Restricted Boltzmann Machines.</span>
+        <span class="venue"> ICIMCS</span>
+        <span class="pubmeta"> 2017: 280-289.</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qingzhong Li.</span>
+        <span class="title"> Div-clustering: Exploring active users for social collaborative recommendation.</span>
+        <span class="venue"> Journal of Network and Computer Applications</span>
+        <span class="pubmeta"> 36(6): 1642-1650 (2013).</span>
+      </li>
+
+      <li>
+        <span class="authors">Yongqing Zheng, Yufang Bian, Xin Du, <strong>Hongchen Wu</strong>.</span>
+        <span class="title"> A Deep Web Database Sampling Method Based on High Correlation Keywords.</span>
+        <span class="venue"> WISA</span>
+        <span class="pubmeta"> 2012: 9-14.</span>
+      </li>
+
+      <li>
+        <span class="authors"><strong>Hongchen Wu</strong>, Xinjun Wang, Zhaohui Peng, Qiuyan Li.</span>
+        <span class="title"> Actively building collaborative filtering recommendation in clustered social data.</span>
+        <span class="venue"> CSCWD</span>
+        <span class="pubmeta"> 2012: 693-697.</span>
+      </li>
     </ol>
   </div>
 
@@ -81,6 +288,5 @@
     <p><strong>Email:</strong> wuhongchen@sdnu.edu.cn</p>
     <p><strong>Office:</strong> Room 402, Wenzong Building, Changqinghu Campus</p>
   </div>
-
 </body>
 </html>
